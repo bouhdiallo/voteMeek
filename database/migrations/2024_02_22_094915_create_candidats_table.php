@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('electeurs', function (Blueprint $table) {
+        Schema::create('candidats', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
             $table->string('prenom');
             $table->string('etablissement');
-            $table->foreignId('candidat_id');
+            $table->string('niveau');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('electeurs');
+        Schema::dropIfExists('candidats');
     }
 };
