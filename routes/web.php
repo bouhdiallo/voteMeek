@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CandidatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/ajouter/Candidat', [CandidatController::class, 'index']);
+Route::get('/liste/Candidat', [CandidatController::class, 'liste']);
+Route::post('/Enregistrer/Candidat', [CandidatController::class, 'store'])->name('store.candidat');
+

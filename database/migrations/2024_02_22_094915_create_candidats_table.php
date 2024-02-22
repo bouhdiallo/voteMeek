@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('etablissement');
+            $table->string('filiere');
             $table->string('niveau');
             $table->timestamps();
         });

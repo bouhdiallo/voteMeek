@@ -11,9 +11,6 @@
     <title>GESTION VOTE</title>
   </head>
   <body>
-    <h1>Notre Menu</h1>
-
-
     <nav class="navbar navbar-expand-lg navbar-light bg-success">
         <div class="container-fluid">
           <a class="navbar-brand text-white" href="#">MEEK</a>
@@ -42,8 +39,8 @@
                     GESTION CANDIDAT
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Ajouter</a></li>
-                  <li><a class="dropdown-item" href="#">Liste </a></li>
+                  <li><a class="dropdown-item" href="/ajouter/Candidat">Ajouter</a></li>
+                  <li><a class="dropdown-item" href="/liste/Candidat">Liste </a></li>
                   {{-- <li><hr class="dropdown-divider"></li> --}}
                 </ul>
               </li>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Candidat;
 use Illuminate\Http\Request;
 
 class CandidatController extends Controller
@@ -11,7 +12,7 @@ class CandidatController extends Controller
      */
     public function index()
     {
-        //
+        return view('candidats.ajoutCandidat');
     }
 
     /**
@@ -27,15 +28,26 @@ class CandidatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $candidat = new Candidat();
+
+        $candidat->nom = $request->nom;
+        $candidat->prenom = $request->prenom;
+        $candidat->etablissement = $request->etablissement;
+        $candidat->filiere = $request->filiere;
+        $candidat->niveau = $request->niveau;
+
+        $candidat->save();
+        return redirect()->back()->with('success','candidat enregistrer');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function liste()
     {
-        //
+        $candidat = Candidat::all();
+        // dd($candidat);
+        return view ('candidats.listeCandidat', compact('candidat'));
     }
 
     /**
