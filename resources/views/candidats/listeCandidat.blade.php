@@ -4,6 +4,7 @@
 @section ('contenu')
 <div class="container">
     <table class="table table-primary table-striped">
+         <div class="card-header bg-info text-white">LISTE DES CANDIDATS</div>
         <tr>
             <th>id</th> <br>
             <th>nom</th>
