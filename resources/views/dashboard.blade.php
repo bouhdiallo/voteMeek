@@ -36,7 +36,7 @@
                     <!-- Vos éléments de menu ici -->
                 </ul>
                 <span class="navbar-text">
-                    Bienvenue {{ auth()->user()->name }}
+                    {{-- Bienvenue {{ auth()->user()->name}} --}}
                 </span>
                 {{-- <form class="d-flex">
                   @csrf

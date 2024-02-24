@@ -62,7 +62,7 @@
             </ul>
             <form class="d-flex">
               <span class="navbar-text">
-                {{ auth()->user()->name }}
+                {{-- {{ auth()->user()->name }} --}}
             </span>
               {{-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button> --}}
@@ -150,7 +150,7 @@
     <label for="exampleSelect1" class="form-label mt-4">Example select</label>
     <select class="form-select" id="exampleSelect1" name="candidat_id">
         @foreach ($candidat as $candidats)
-        <option value="{{$candidats->id}}">{{$candidats->nom}} {{$candidats->prenom}}</option>
+        <option value="{{$candidats->id}}">{{$candidats->nom}}</option>
         @endforeach
       </select>
     </div>
