@@ -18,6 +18,13 @@ class ElecteurController extends Controller
         return view('electeurs.vote', compact('candidat'));
     }
 
+    public function listage()
+    {
+         $vote = Electeur::all();
+        return view('electeurs.listeVotant', compact('vote'));
+    }
+    
+
 
     public function voter(Request $request)
     {
@@ -27,7 +34,6 @@ class ElecteurController extends Controller
         //     'prenom' => 'required',
         //     'etablissement' => 'required',
         // ]);
-
         $vote = new Electeur();
 
         $vote->nom = $request->nom; 
@@ -35,7 +41,7 @@ class ElecteurController extends Controller
         $vote->etablissement = $request->etablissement;
         $vote->candidat_id = $request->candidat_id;
         $vote->save();
-        return redirect()->back()->with('success','vote effectuer avec succes');
+        return redirect()->back()->with('success','vote effectuer avec succes, MEEK vous remercie');
     }
 
     /**
@@ -43,7 +49,7 @@ class ElecteurController extends Controller
      */
     public function create()
     {
-        return view('index');
+         return view('/dashboard');
     }
 
 

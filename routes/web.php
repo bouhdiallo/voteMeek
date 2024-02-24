@@ -17,7 +17,8 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
- Route::get('dashboard', DashboardController::class)->name('dashboard');
+// Route::get('/', DashboardController::class)->name('index');
+Route::get('/', DashboardController::class)->name('index');
 
 
 //inscription et connexioon
@@ -28,6 +29,9 @@ Route::get('login', [AuthController::class, 'create'])->name('login');
 Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
+
+// Route::post('dashboard', [AuthController::class, 'authenticate'])->name('dashboard');
+Route::post('dash', [ElecteurController::class, 'create'])->name('dash');
 
 
 
@@ -41,5 +45,5 @@ Route::post('/Enregistrer/Candidat', [CandidatController::class, 'store'])->name
 
 
 Route::get('/ajouter/vote', [ElecteurController::class, 'index']);
-// Route::get('/liste/Candidat', [CandidatController::class, 'liste']);
- Route::post('/Enregistrer/vote', [CandidatController::class, 'voter'])->name('store.vote');
+Route::get('/liste/votant', [ElecteurController::class, 'listage']);
+ Route::post('/Enregistrer/vote', [ElecteurController::class, 'voter'])->name('voter.vote');

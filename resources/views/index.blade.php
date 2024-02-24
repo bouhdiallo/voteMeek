@@ -59,7 +59,7 @@
                         </form>
                     </div>
                     <div class="signup-image">
-                        <figure><img src={{asset('colorlib-regform-7/images/signup-image.jpg')}} alt="sing up image"></figure>
+                        <figure><img src="{{asset('colorlib-regform-7/images/signup-image.jpg')}}" alt="sing up image"></figure>
                         <a href="#" class="signup-image-link">I am already member</a>
                     </div>
                 </div>
@@ -71,13 +71,13 @@
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src={{asset('colorlib-regform-7/images/signin-image.jpg')}} alt="sing up image"></figure>
+                        <figure><img src="{{asset('colorlib-regform-7/images/signin-image.jpg')}}" alt="sing up image"></figure>
                         <a href="#" class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
                         <h2 class="form-title">Sign up</h2>
-                        <form action="{{ route('authenticate')}}" method="POST" class="register-form" id="login-form">
+                        <form action="{{ route('dash')}}" method="POST" class="register-form" id="login-form">
                             @csrf
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -112,6 +112,6 @@
 
     <!-- JS -->
     <script src="{{asset('colorlib-regform-7/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('colorlib-regform-7/js/main.js"></script')}}>
+    <script src="{{asset('colorlib-regform-7/js/main.js')}}"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
