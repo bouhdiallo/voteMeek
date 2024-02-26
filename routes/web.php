@@ -52,7 +52,7 @@ Route::post('/Enregistrer/Candidat', [CandidatController::class, 'store'])->name
  Route::get('/liste/votant', [ElecteurController::class, 'listage']);
 
 
-Route::post('/ajouter/vote', [ElecteurController::class, 'index'])->name('ajouter.vote');
+// Route::post('/ajouter/vote', [ElecteurController::class, 'index'])->name('ajouter.vote');
 Route::post('/Enregistrer/vote', [ElecteurController::class, 'voter'])->name('voter.vote');
 
-
+Route::get('/vote', [ElecteurController::class, 'index'])->name('vote');
