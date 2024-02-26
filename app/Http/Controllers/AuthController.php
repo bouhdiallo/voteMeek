@@ -23,7 +23,7 @@ class AuthController extends Controller
         $electeur->save();
     
         // Redirection avec un message de succès
-        return redirect()->back()->with('success', 'Votre inscription sur la plateforme du MEEK a bien réussi.');
+        return back();
     }
 
     public function login()
