@@ -21,8 +21,8 @@
             margin-bottom: 0; /* Supprime la marge inférieure */
         }
     </style>
-</head>
-<body>
+</head> 
+<body> 
     <nav class="navbar navbar-expand-lg navbar-light bg-success">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="#">Mouvement des élèves et étudiants de Kabatoki (MEEK)</a>
@@ -54,7 +54,7 @@
 
     <div class="jumbotron text-center">
         <!-- Image en haut avec une certaine hauteur -->
-    </div>
+    </div>  <br><br>
 
     <!-- Votre contenu ici -->
 
@@ -72,7 +72,7 @@
 <h1>realisation et activites</h1>
 <h3>Lorem Ipsum est tout simplement un faux texte de l’industrie de l’imprimerie et de la composition. Lorem Ipsum est le texte factice standard de l'industrie depuis les années 1500, lorsqu'un imprimeur inconnu a pris une galerie de caractères et l'a brouillée pour en faire un livre de spécimens de caractères. Il a survécu non seulement à cinq siècles, mais aussi au saut vers la composition électronique, restant essentiellement inchangé. Il a été popularisé dans les années 1960 avec la sortie de feuilles Letraset contenant des passages de Lorem Ipsum, et plus récemment avec des logiciels de publication assistée par ordinateur comme Aldus PageMaker incluant des versions de Lorem Ipsum.</h3>
 </div>
-</div>
+</div> <br> <br>
 
     <footer class="bg-dark text-center text-white">
         <!-- Grid container -->
