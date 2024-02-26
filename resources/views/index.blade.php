@@ -30,7 +30,7 @@
 
                          </div>
                         <h2 class="form-title">Sign up</h2>
-                        <form action="/enregistrer/electeur"   method="POST" class="register-form" id="register-form">
+                        <form action="{{route('enregistrer.electeur')}}"   method="POST" class="register-form" id="register-form">
                             @csrf
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
