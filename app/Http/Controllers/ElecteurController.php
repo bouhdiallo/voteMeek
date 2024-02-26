@@ -54,29 +54,23 @@ class ElecteurController extends Controller
     }
 
 
-    public function inscriptionElecteur(Request $request)
-{
-    // Validation des données
-    //  $request->validate([
-    //     'name' => 'required|string|max:255',
-    //     'email' => 'required|string|email|max:255|unique:electeurs',
-    //     'password' => 'required|string|min:8',
-    // ]);
+//     public function inscriptionElecteur(Request $request)
+// {
 
-    // Création d'un nouvel électeur
-    $electeur = new User();
+//     // Création d'un nouvel électeur
+//     $electeur = new User();
 
-    // Attribution des valeurs
-    $electeur->name = $request->name;
-    $electeur->email = $request->email;
-    $electeur->password = bcrypt($request->password);
+//     // Attribution des valeurs
+//     $electeur->name = $request->name;
+//     $electeur->email = $request->email;
+//     $electeur->password = bcrypt($request->password);
 
-    // Enregistrement de l'électeur
-    $electeur->save();
+//     // Enregistrement de l'électeur
+//     $electeur->save();
 
-    // Redirection avec un message de succès
-    return redirect()->back()->with('success', 'Votre inscription sur la plateforme du MEEK a bien réussi.');
-}
+//     // Redirection avec un message de succès
+//     return redirect()->back()->with('success', 'Votre inscription sur la plateforme du MEEK a bien réussi.');
+// }
 
 
 

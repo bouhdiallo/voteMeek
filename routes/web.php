@@ -22,8 +22,8 @@ Route::get('/', DashboardController::class)->name('index');
 
 
 //inscription et connexioon
-Route::get('/inscription/Electeur', [ElecteurController::class, 'create']);
-Route::post('/enregistrer/electeur', [ElecteurController::class, 'inscriptionElecteur'])->name('enregistrer.electeur');
+Route::get('/inscription/Electeur', [AuthController::class, 'create']);
+Route::post('/enregistrer/electeur', [AuthController::class, 'inscriptionElecteur'])->name('enregistrer.electeur');
 // Route::post('/enregistrer/electeur', [ElecteurController::class, 'inscriptionElecteur'])->name('enregistrer.electeur');
 Route::get('login', [AuthController::class, 'create'])->name('login');
 Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
@@ -45,7 +45,14 @@ Route::post('/Enregistrer/Candidat', [CandidatController::class, 'store'])->name
 
 
 // Route::get('/ajouter/vote', [ElecteurController::class, 'index']);
-Route::get('/liste/votant', [ElecteurController::class, 'listage']);
- Route::post('/Enregistrer/vote', [ElecteurController::class, 'voter'])->name('voter.vote');
- Route::post('/ajouter/vote', [ElecteurController::class, 'index'])->name('ajouter.vote');
+
+// Route::get('/liste/votant', [ElecteurController::class, 'listage']);
+//  Route::post('/Enregistrer/vote', [ElecteurController::class, 'voter'])->name('voter.vote');
+//  Route::get('/ajouter/vote', [ElecteurController::class, 'index'])->name('ajouter.vote');
+
+
+Route::get('/ajouter/vote', [ElecteurController::class, 'index'])->name('ajouter.vote');
+Route::post('/Enregistrer/vote', [ElecteurController::class, 'voter'])->name('voter.vote');
+// Route::post('/ajouter/vote', [ElecteurController::class, 'voter'])->name('voter.vote');
+
 
