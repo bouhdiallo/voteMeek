@@ -20,7 +20,7 @@ use App\Http\Controllers\DashboardController;
 */
 
 // Route::get('/', DashboardController::class)->name('index');
-Route::get('/', DashboardController::class)->name('index');
+Route::get('dash', DashboardController::class)->name('index');
 
 
 //inscription et connexioon
