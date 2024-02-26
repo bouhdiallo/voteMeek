@@ -54,7 +54,7 @@
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
-                                <button class="form-submit" type="submit">Inscription</button>
+                                {{-- <button class="form-submit" type="submit">Inscription</button> --}}
                             </div>
                         </form>
                     </div>
