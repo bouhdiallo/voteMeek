@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Electeur;
 use Illuminate\Http\Request;
 use GuzzleHttp\Promise\Create;
 
@@ -17,23 +18,25 @@ class UserController extends Controller
     }
 
 
-     public function inscriptionElecteur(Request $request)
-{
+    public function inscriptionElecteur(Request $request)
+    {
+        // Validation des données du formulaire
+        // $request->validate([
+        //     'name' => 'required|string|max:255',
+        //     'email' => 'required|email|unique:electeurs|max:255',
+        //     'password' => 'required|string|min:8',
+        // ]);
 
-    // Création d'un nouvel électeur
-    $electeur = new User();
+        // Création d'un nouvel électeur
+        $electeur = new User();
+        $electeur->name = $request->name;
+        $electeur->email = $request->email;
+        $electeur->password = bcrypt($request->password);
+        $electeur->save();
 
-    // Attribution des valeurs
-    $electeur->name = $request->name;
-    $electeur->email = $request->email;
-    $electeur->password = bcrypt($request->password);
-
-    // Enregistrement de l'électeur
-    $electeur->save();
-
-    // Redirection avec un message de succès
-    return redirect()->back()->with('success', 'Votre inscription sur la plateforme du MEEK a bien réussi.');
-}
+        // Redirection avec un message de succès
+        return redirect()->back()->with('success', 'Inscription réussie!');
+    }
     /**
      * Show the form for creating a new resource.
      */
