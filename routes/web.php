@@ -20,7 +20,7 @@ use App\Http\Controllers\DashboardController;
 */
 
 // Route::get('/', DashboardController::class)->name('index');
-Route::get('dash', DashboardController::class)->name('index');
+Route::get('dash', DashboardController::class)->name('dashboard');
 
 
 //inscription et connexioon
@@ -33,7 +33,7 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 
 // Route::post('dashboard', [AuthController::class, 'authenticate'])->name('dashboard');
-Route::post('dash', [ElecteurController::class, 'create'])->name('dash');
+// Route::post('dash', [ElecteurController::class, 'create'])->name('dash');
 
 
 

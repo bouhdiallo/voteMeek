@@ -48,10 +48,10 @@ class ElecteurController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-         return view('/dashboard');
-    }
+    // public function create()
+    // {
+    //      return view('/dashboard');
+    // }
 
 
 //     public function inscriptionElecteur(Request $request)
