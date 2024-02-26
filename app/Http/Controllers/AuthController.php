@@ -2,30 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-
-    public function inscriptionElecteur(Request $request)
-    {
     
-        // Création d'un nouvel électeur
-        $electeur = new User();
-    
-        // Attribution des valeurs
-        $electeur->name = $request->name;
-        $electeur->email = $request->email;
-        $electeur->password = bcrypt($request->password);
-    
-        // Enregistrement de l'électeur
-        $electeur->save();
-    
-        // Redirection avec un message de succès
-        return back();
-    }
-
     public function login()
     {
         return view('auth.login');

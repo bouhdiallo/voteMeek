@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\CandidatController;
 use App\Http\Controllers\ElecteurController;
 use App\Http\Controllers\DashboardController;
@@ -22,8 +24,8 @@ Route::get('/', DashboardController::class)->name('index');
 
 
 //inscription et connexioon
-Route::get('/inscription/Electeur', [AuthController::class, 'create']);
-Route::post('/enregistrer/electeur', [AuthController::class, 'inscriptionElecteur'])->name('enregistrer.electeur');
+Route::get('/inscription/Electeur', [UserController::class, 'create']);
+Route::post('/enregistrer/electeur', [UserController::class, 'inscriptionElecteur'])->name('enregistrer.electeur');
 // Route::post('/enregistrer/electeur', [ElecteurController::class, 'inscriptionElecteur'])->name('enregistrer.electeur');
 Route::get('login', [AuthController::class, 'create'])->name('login');
 Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
