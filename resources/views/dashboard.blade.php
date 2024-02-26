@@ -26,7 +26,10 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-success">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="#">Mouvement des élèves et étudiants de Kabatoki (MEEK)</a>
-            <a class="btn btn-info" href="/ajouter/vote">VOTER</a>
+            <form action="{{ route('ajouter.vote') }}" method="GET">
+                @csrf
+                <button type="submit">VOTER</button>
+            </form>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

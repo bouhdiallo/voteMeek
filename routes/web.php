@@ -44,6 +44,8 @@ Route::post('/Enregistrer/Candidat', [CandidatController::class, 'store'])->name
 
 
 
-Route::get('/ajouter/vote', [ElecteurController::class, 'index']);
+// Route::get('/ajouter/vote', [ElecteurController::class, 'index']);
 Route::get('/liste/votant', [ElecteurController::class, 'listage']);
  Route::post('/Enregistrer/vote', [ElecteurController::class, 'voter'])->name('voter.vote');
+ Route::get('/ajouter/vote', [ElecteurController::class, 'index'])->name('ajouter.vote');
+

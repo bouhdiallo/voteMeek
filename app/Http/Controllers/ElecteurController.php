@@ -41,6 +41,7 @@ class ElecteurController extends Controller
         $vote->etablissement = $request->etablissement;
         $vote->candidat_id = $request->candidat_id;
         $vote->save();
+        
         return redirect()->back()->with('success','vote effectuer avec succes, MEEK vous remercie');
     }
 
