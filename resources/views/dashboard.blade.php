@@ -31,7 +31,7 @@
                 <button type="submit">VOTER</button>
             </form> --}}
 
-            <form action="{{ route('ajouter.vote') }}" method="POST">
+            <form action="/ajouter/vote" method="GET">
                 @csrf
                 <button type="submit">VOTER</button>
             </form>
